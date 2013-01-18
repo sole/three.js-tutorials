@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Rendering snow with shaders tutorial / 6</title>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<script type="text/javascript" src="libs/three-r54.min.js"></script>
+		<script type="text/javascript" src="libs/dat.gui.min.js"></script>
+		<script type="text/javascript" src="step06.js"></script>
+	</head>
+	<body>
+		<script type="x-shader/x-vertex" id="step06_vs">
+			uniform float radiusX;
+			uniform float radiusZ;
+			uniform float height;
+			uniform float elapsedTime;
+
+			void main() {
+				vec3 pos = position;
+				pos.x += cos((elapsedTime + position.z) * 0.25) * radiusX;
+				pos.y = mod(pos.y - elapsedTime, height);
+				pos.z += sin((elapsedTime + position.x) * 0.25) * radiusZ;
+
+				gl_Position = projectionMatrix * modelViewMatrix * vec4( pos, 1.0 );
+			}
+		</script>
+
+		<script type="x-shader/x-fragment" id="step04_fs">
+			uniform vec3 color;
+
+			void main() {
+				gl_FragColor = vec4( color, 1.0 );
+			}
+		</script>
+	</body>
+</html>
+

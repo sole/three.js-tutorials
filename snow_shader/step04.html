@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Rendering snow with shaders tutorial / 4</title>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<script type="text/javascript" src="libs/three-r54.min.js"></script>
+		<script type="text/javascript" src="libs/dat.gui.min.js"></script>
+		<script type="text/javascript" src="step04.js"></script>		
+	</head>
+	<body>
+		<script type="x-shader/x-vertex" id="step03_vs">
+			void main() {
+				gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+			}
+		</script>
+		<script type="x-shader/x-fragment" id="step04_fs">
+			uniform vec3 color;
+
+			void main() {
+				gl_FragColor = vec4( color, 1.0 );
+			}
+		</script>
+	</body>
+</html>

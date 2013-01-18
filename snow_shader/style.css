@@ -1,0 +1,39 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #000;
+	overflow: hidden;
+	color: #fff;
+}
+
+#header {
+	z-index: 10;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50%;
+	text-align: center;
+	color: #fff;
+	background: rgba( 255, 255, 255, 0.5 );
+	padding: 5px 0;
+	text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.85);
+	font-family: Courier, 'Courier New', mono, sans;
+	font-weight: bold;
+}
+	#header a {
+		color: #ff0;
+	}
+
+canvas {
+	z-index: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+a {
+	color: #00f;
+}
