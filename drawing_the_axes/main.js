@@ -4,6 +4,8 @@ window.onload = function() {
 		camera,
 		controls,
 		meshMaterial;
+	
+	if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
 
 	renderer = new THREE.WebGLRenderer({ antialias: true });
 	document.body.appendChild( renderer.domElement );
