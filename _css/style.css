@@ -1,0 +1,33 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	overflow: hidden;
+}
+
+h1 {
+	z-index: 10;
+	position: relative;
+	font-size: 1.5rem;
+	text-align: center;
+	text-shadow: 1px 1px 1px #fff;
+	font-weight: normal;
+	font-family: Helvetica, Arial, sans;
+
+}
+
+a {
+	color: #00a;
+}
+
+#container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 0;
+}
+
